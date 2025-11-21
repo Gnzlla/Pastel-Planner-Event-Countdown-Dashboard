@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "name": "pastel-planner-event-countdown-dashboard",
+  "version": "1.0.0",
+  "description": "A project to apply everything I learned about APIs, backend development, and databass while building something modern, convenient, and genuinly useful.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gnzlla/Pastel-Planner-Event-Countdown-Dashboard.git"
+  },
+  "keywords": [
+    "planner",
+    "project",
+    "customized"
+  ],
+  "author": "Ellaine P. Gonzales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gnzlla/Pastel-Planner-Event-Countdown-Dashboard/issues"
+  },
+  "homepage": "https://github.com/Gnzlla/Pastel-Planner-Event-Countdown-Dashboard#readme"
+}
