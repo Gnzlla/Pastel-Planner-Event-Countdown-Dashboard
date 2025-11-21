@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="main-container">
+        <p class="reminder-card" name="reminder">The day is getting closer!🤩</p>
+        <div id="month-day">
+            <p class="month">
+                <%= month %> <span class="day">
+                        <%= day %>
+                    </span>
+            </p>
+        </div>
+        <div class="button-event">
+            <a href="/addEvent" id="addEvent" name="addEvent"><span>
+                    <div class="calendar-container"><img src="images/calendar.svg"></div>
+                </span>Add Event</a>
+        </div>
+    </div>
+    <%- include("partials/footer.ejs") %>

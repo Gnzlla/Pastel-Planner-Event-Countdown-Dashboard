@@ -1,0 +1,61 @@
+.page-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.background-radial {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-image:
+        radial-gradient(circle 600px at 0% 200px, #8D97AE 10%, transparent 100%),
+        radial-gradient(circle 600px at 100% 200px, #8D97AE 10%, transparent 100%);
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 170px;
+    margin-bottom: 0;
+}
+.header-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header-title h1 {
+    color: #2C3838;
+    font-family: Poppins;
+    font-size: 32.521px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.social-icons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 30px;
+}
+
+footer {
+    color: rgba(44, 56, 56, 0.34);
+    position: relative;
+    font-family: "Poppins";
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-left: 3rem;
+}
+
+a{text-decoration: none;}
