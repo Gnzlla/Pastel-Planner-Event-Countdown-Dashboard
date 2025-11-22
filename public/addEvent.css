@@ -1,0 +1,119 @@
+#main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.vertical-date-container {
+    display: grid;
+    grid-template-columns: 300px 500px;
+    grid-template-rows: 500px;
+    padding: none;
+}
+
+.first-column {
+    overflow: hidden;
+}
+
+.month {
+    margin: 0;
+    margin-top: 60px;
+    padding: 0;
+    line-height: 0.8;
+}
+
+.day-vertical {
+    display: block;
+    margin: 0;
+    line-height: 0.50;
+    color: #2C3838;
+    font-family: Inter;
+    font-size: 216.948px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-top: -30px;
+}
+#submit-form{
+    margin: 70px 0 0 70px;
+}
+
+#submit-container{
+    margin: 10px 0 0 312px;
+    border: transparent;
+}
+.on-top {
+    color: #2C3838;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 8px;
+}
+
+.blank-space {
+    width: 420px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 7.929px;
+    background: white;
+    box-shadow: 3px 4px 5.7px 0 rgba(0, 0, 0, 0.25);
+    border: transparent;
+    font-family: Poppins;
+    padding: 0 20px 0 20px;
+    color: #2C3838;
+}
+
+.description-area {
+    border: transparent;
+    background-color: white;
+    width: 420px;
+    height: 116px;
+    flex-shrink: 0;
+    font-family: Poppins;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-bottom: 0;
+    color: #2C3838;
+    resize: none;
+    text-align: justify;
+    overflow: visible;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    border-radius: 7.929px;
+    box-shadow: 3px 4px 5.7px 0 rgba(0, 0, 0, 0.25);
+    padding: 10px 20px 10px 20px;
+}
+
+select{
+    width: 420px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 7.929px;
+    background: white;
+    box-shadow: 3px 4px 5.7px 0 rgba(0, 0, 0, 0.25);
+    border: transparent;
+    font-family: Poppins;
+    padding: 0 20px 0 20px;
+    color: #2C3838;
+}
+
+button{
+    width: 108px;
+    font-family: Poppins;
+    color: white;
+height: 37px;
+flex-shrink: 0;
+border-radius: 7.929px;
+background: #2C3838;
+box-shadow: 3px 4px 5.7px 0 rgba(0, 0, 0, 0.25);
+}
+.blank-space:focus,
+.description-area:focus, select:focus {
+    outline: none;
+}
+
+.blank-space::placeholder,
+.description-area::placeholder {
+    font-family: Poppins;
+}

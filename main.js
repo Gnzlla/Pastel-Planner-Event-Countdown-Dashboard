@@ -19,19 +19,20 @@ const date = new Date();
 const month = date.getMonth();
 const day = date.getDate();
 const year = date.getFullYear
-const firstDay = date(year, month, 1);
+const firstDay = new Date(year, month, 1);
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", (req, res) =>{
-    res.render("main.ejs", {month: month, day: day});
+    res.render("main.ejs", {month: month +1, day: day});
 });
 
 app.get("/addEvent", (req, res) => {
-    res.render("addEvent.ejs");
+    res.render("addEvent.ejs", {month: month + 1, day: day});
 });
 
 app.listen(port,()=>{
-    console.log(`Server is running port ${port}`)
+    console.log(`Server is running port ${port}`);
+    console.log(month + 1);
 });
