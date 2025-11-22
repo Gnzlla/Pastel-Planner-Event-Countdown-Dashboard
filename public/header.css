@@ -51,11 +51,12 @@ footer {
     color: rgba(44, 56, 56, 0.34);
     position: relative;
     font-family: "Poppins";
-    font-weight: 600;
+    font-weight: 400;
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
-    margin-left: 3rem;
+    margin-left: 8rem;
+    font-size: 15px;
 }
 
 a{text-decoration: none;}
