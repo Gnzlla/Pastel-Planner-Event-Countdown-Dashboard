@@ -33,14 +33,16 @@
     line-height: normal;
     margin-top: -30px;
 }
-#submit-form{
+
+#submit-form {
     margin: 70px 0 0 70px;
 }
 
-#submit-container{
+#submit-container {
     margin: 10px 0 0 312px;
     border: transparent;
 }
+
 .on-top {
     color: #2C3838;
     font-family: Poppins;
@@ -85,7 +87,7 @@
     padding: 10px 20px 10px 20px;
 }
 
-select{
+select {
     width: 420px;
     height: 39px;
     flex-shrink: 0;
@@ -98,18 +100,32 @@ select{
     color: #2C3838;
 }
 
-button{
+button {
     width: 108px;
     font-family: Poppins;
     color: white;
-height: 37px;
-flex-shrink: 0;
-border-radius: 7.929px;
-background: #2C3838;
-box-shadow: 3px 4px 5.7px 0 rgba(0, 0, 0, 0.25);
+    height: 37px;
+    flex-shrink: 0;
+    border-radius: 7.929px;
+    background: #2C3838;
+    box-shadow: 3px 4px 5.7px 0 rgba(0, 0, 0, 0.25);
+    border: transparent;
+    font-weight: 600;
 }
+
+.no-option{
+    color: pink;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: #2C3838;
+    cursor: pointer;
+}
+
 .blank-space:focus,
-.description-area:focus, select:focus {
+.description-area:focus,
+select:focus {
     outline: none;
 }
 
