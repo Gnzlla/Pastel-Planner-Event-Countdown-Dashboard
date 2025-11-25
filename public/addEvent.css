@@ -113,10 +113,6 @@ button {
     font-weight: 600;
 }
 
-.no-option{
-    color: pink;
-}
-
 .submit-btn:hover {
     background-color: white;
     color: #2C3838;

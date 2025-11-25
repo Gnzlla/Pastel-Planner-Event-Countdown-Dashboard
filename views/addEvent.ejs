@@ -9,30 +9,37 @@
                 </p>
             </div>
             <div class="second-column">
-                <form action="/submitEvent" method="POST">
-                    <div id="submit-form">
-                        <h2 class="title on-top">Title</h2>
-                        <input class="blank-space inputer" name="title" placeholder="Name of the event…">
-                        <h2 class="event-option on-top">Occasion</h2>
-                        <select name="categoryType" id="occation-options">
-                            <option value="" disabled selected hidden class="no-option">Select an occasion...</option>
-                            <option value="school">School</option>
-                            <option value="work">Work</option>
-                            <option value="personal">Personal</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="travel">Travel</option>
-                        </select>
-                        <h2 class="description on-top">Description</h2>
-                        <textarea class="description-area" name="descriptionArea"
-                            placeholder="Describe what’s happening on this day…"></textarea>
+                    <form action="/submitEvent" method="POST">
+                        <input type="hidden" name="selectedDate"
+                            value="<%= year %>-<%= month.toString().padStart(2,'0') %>-<%= day.toString().padStart(2,'0') %>">
+                        <div id="submit-form">
+                            <!-- Title -->
+                            <h2 class="title on-top">Title</h2>
+                            <input class="blank-space inputer" name="title" placeholder="Name of the event…">
+
+                            <!-- Occasion Options -->
+                            <h2 class="event-option on-top">Occasion</h2>
+                            <select name="categoryType" id="occation-options">
+                                <option value="" disabled selected hidden>Select an occasion...</option>
+                                <option value="school">School</option>
+                                <option value="work">Work</option>
+                                <option value="personal">Personal</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="travel">Travel</option>
+                            </select>
+
+                            <!-- Description -->
+                            <h2 class="description on-top">Description</h2>
+                            <textarea class="description-area" name="descriptionArea"
+                                placeholder="Describe what’s happening on this day…"></textarea>
                             <div id="submit-container">
                                 <button type="submit" class="submit-btn">Submit</button>
                             </div>
-                    </div>
-                </form>
+                        </div>
+                    </form>
             </div>
-
         </div>
     </div>
+
 
     <%- include("partials/footer.ejs") %>
