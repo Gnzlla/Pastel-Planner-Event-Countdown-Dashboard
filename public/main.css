@@ -86,3 +86,39 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+#horizontal-calendar{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    margin: 40px 0 0 410px;
+    justify-items: center;
+    font-size: 18px;
+    font-family: Poppins;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    border: transparent;
+    background-color: transparent;
+    scrollbar-width: none;
+}
+
+.calendar-day{
+    display: inline-block;
+  color:#2C3838;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.calendar-day:hover{
+    border-radius: 7.929px;
+    background-color: #2C383810;
+    cursor: pointer;
+}
+
+.calendar-day.active {
+    background-color: pink;
+    color: white;
+    border-radius: 10px;
+}
