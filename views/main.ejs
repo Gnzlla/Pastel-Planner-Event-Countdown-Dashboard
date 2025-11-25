@@ -9,10 +9,55 @@
                     </span>
             </p>
         </div>
-        <div class="button-event">
-            <a href="/addEvent" id="addEvent" name="addEvent"><span>
-                    <div class="calendar-container"><img src="images/calendar.svg"></div>
-                </span>Add Event</a>
-        </div>
+        <!-- If there is no selected date, Button ("Add Event") will be present -->
+        <% if (!selectedDate) { %> 
+            <div class="button-event">
+                <a href="/addEvent" id="addEvent" name="addEvent">
+                    <span>
+                        <div class="calendar-container"><img src="images/calendar.svg"></div>
+                    </span>
+                    Add Event
+                </a>
+            </div>
+            <% } else{%>
+                <div class="what-event">
+                    <h2 class="title-of-event"><%= title %></h2>
+                    <h3 class="description-of-event"><%= description %></h3>
+                </div>
+            <%  }%>
+                <div id="horizontal-calendar">
+                    <input type="hidden" name="selectedDate" id="selectedDate">
+                </div>
     </div>
+
+    <script>
+        const container = document.getElementById("horizontal-calendar");
+        const today = new Date();
+        const month = "<%= month %>";
+        const year = "<%= year %>";
+        const lastDay = "<%= lastDay %>";
+
+        for (let d = 1; d <= lastDay; d++) {
+            const dayElement = document.createElement("div"); //Each day will be within an element "div"
+            dayElement.textContent = d; 
+            dayElement.classList.add("calendar-day"); //each day will have a class of "calendar-day"
+
+            if (d === today.getDate()) { //If user picked the same day, will be added as "active"
+                dayElement.classList.add("active");
+            }
+
+            dayElement.addEventListener("click", () => {
+                const selectedDate = `${year}-${month.toString().padStart(2, '0')}-${d.toString().padStart(2, '0')}`;
+                <!-- window.location.href = `/addEvent?date=${selectedDate}`; -->
+            });
+
+            container.appendChild(dayElement);
+        }
+
+        const enableScroll = document.querySelector("#horizontal-calendar");
+        enableScroll.addEventListener('wheel', ()=>{ //enable to scroll with scroll wheel from left to right
+            enableScroll.scrollLeft += event.deltaY;
+        })
+
+    </script>
     <%- include("partials/footer.ejs") %>
