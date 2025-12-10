@@ -87,11 +87,16 @@ body {
     justify-content: center;
 }
 
+#main-horizontal-calendar{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 #horizontal-calendar{
     display: flex;
     flex-direction: row;
     width: 700px;
-    margin: 40px 0 0 410px;
     justify-items: center;
     font-size: 18px;
     font-family: Poppins;
@@ -118,7 +123,8 @@ body {
 }
 
 .calendar-day.active {
-    background-color: pink;
+    background-color: #2C3838;
     color: white;
+    font-weight: bold;
     border-radius: 10px;
 }
